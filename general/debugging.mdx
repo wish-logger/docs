@@ -1,5 +1,128 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Debugging"
+description: "How to generate, understand debug output in Wish Logger, learn how to debug Wish yourself!"
 ---
 
+## Sample Debug Output
+
+```json
+{
+  "1309879753548894348": {
+    "server_name": "",
+    "server_config": {},
+    "ignore": {
+      "channels": [],
+      "messages": [],
+      "targets": [],
+      "executors": [],
+      "roles": [],
+      "categories": []
+    },
+    "additional_server_config": {
+      "Defaults": {
+        "DoIgnoreBots": true,
+        "SendAttachmentsAsSpoilers": true
+      },
+      "Language": {
+        "language": "en_us"
+      }
+    },
+    "user_info": {
+      "id": "",
+      "username": "",
+      "premium": true
+    },
+    "permissions": {
+      "kickMembers": true,
+      "banMembers": true,
+      "administrator": true,
+      "manageChannels": true,
+      "manageGuild": true,
+      "viewAuditLog": true,
+      "sendMessages": true,
+      "manageMessages": true,
+      "embedLinks": true,
+      "attachFiles": true,
+      "readMessageHistory": true,
+      "manageWebhooks": true
+    },
+    "custom_buttons": {}
+      },
+    }
+  }
+}
+```
+
+<Warning>
+  The `custom_buttons` field only appears if the server has **customized** their button configuration. If not, this field will be **empty**.
+</Warning>
+
+## Default Button Configuration
+
+If no custom configuration exists, Wish Logger uses these defaults:
+
+```json
+{
+  "Defaults": {
+    "Ban": { "Button": { "Label": "Ban", "Style": 2, ... } },
+    "Kick": { "Button": { "Label": "Kick", "Style": 2, ... } },
+    "SupportServer": { "Button": { "Label": "Support Server", "Style": 5, ... } },
+    "Customise": { "Button": { "Label": "Customise", "Style": 5, ... } },
+    "EditReason": { "Button": { "Label": "Edit Reason", "Style": 2, ... } },
+    "UserID": { "Button": { "Label": "User ID", "Style": 2, ... } },
+    "Mute": { "Button": { "Label": "Mute", "Style": 2, ... } },
+    "Revoke": { "Button": { "Label": "Revoke", "Style": 2, ... } }
+  }
+}
+```
+
+<Tip>
+  When `custom_buttons` exists, it means the server has overridden the default settings.
+</Tip>
+
+## Versions of Wish Logger
+
+There are currently **three (four) builds** of Wish Logger:
+
+<CardGroup cols={2}>
+  <Card title="Wish Logger" icon="moon-stars" color="#6366f1">
+    Standard and stable bot for most users.
+  </Card>
+  <Card title="Wish Logger Beta" icon="flask" color="#eab308">
+    Experimental version with upcoming features. If something breaks, report it\! After several reports, you'll earn the **Bug Hunter** role.
+  </Card>
+  <Card title="Wish Logger Pro" icon="rocket" color="#06b6d4">
+    Advanced and premium features available in the Pro version.
+  </Card>
+  <Card title="Wish Logger Canary" icon="bird" color="#ebee2b">
+    Development build with upcoming features. Not accessable to normal users.
+  </Card>
+</CardGroup>
+
+## Reporting a Bug
+
+If you’ve followed all steps, but something still isn’t working:
+
+- First, check if your logging channels are assigned and the bot has permissions.
+- Then test with /ping and common events (e.g., message delete, voice join).
+- You can also go to https://wishlogger.xyz/support and see if there's an anwser for your question
+
+### If everything looks right and logs still don’t show up…
+
+If you're sure it's not caused by your setup, [**join our Support Server**](https://discord.com/invite/FRY3NfzgFJ) and report the bug. Please include:
+
+- What isn't working
+- Screenshot or exact command
+- Whether it happens every time or randomly
+
+<Tip>
+  Use `/debug:true` — this attaches a debug file specific to your server (attached in your report) that lets us instantly spot any configuration or internal issues.
+</Tip>
+
+<Info>
+  Debug output is safe to share. It does **not include messages or personal content** — only server-level settings and logs metadata.
+</Info>
+
+## Need Help?
+
+If you’re having trouble understanding your debug output or fixing a bug, reach out via our [Support Server](https://discord.com/invite/FRY3NfzgFJ) — we're happy to help\!
