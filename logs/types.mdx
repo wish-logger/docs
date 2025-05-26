@@ -3,87 +3,87 @@ title: "Types"
 description: "Learn about wish's log types"
 ---
 
-| Log Type Name                | ID  | Special |
-| :--------------------------: | :-: | :-----: |
-| Automod Triggered            | 1   |         |
-| Automod Rule Created         | 2   |         |
-| Automod Rule Updated         | 3   |         |
-| Automod Rule Deleted         | 4   |         |
-| Avatar Updated               | 5   |         |
-| Mass Message Deleted         | 6   |         |
-| Channel Followed             | 7   |         |
-| Channel Unfollowed           | 8   |         |
-| Followed Channel Updated     | 9   |         |
-| Channel Deleted              | 10  |         |
-| Channel Created              | 11  |         |
-| Updated Channel              | 12  |         |
-| Emoji Added                  | 13  |         |
-| Emoji Removed                | 14  |         |
-| Emoji Updated                | 15  |         |
-| Server Role Created          | 16  |         |
-| Server Role Deleted          | 17  |         |
-| Server Role Updated          | 18  |         |
-| Server Event Created         | 19  |         |
-| Server Event Deleted         | 20  |         |
-| Server Event Updated         | 21  |         |
-| Server Event User Joined     | 22  |         |
-| Server Event User Left       | 23  |         |
-| Server Updated               | 24  |         |
-| Server Updated [Featrue -]   | 25  |         |
-| Server Updated [Featrue \+]  | 26  |         |
-| Invite Created               | 27  |         |
-| Invite Deleted               | 28  |         |
-| Member Ban                   | 29  |         |
-| Bot Added                    | 30  |         |
-| User Joined                  | 31  |         |
-| Bot Removed                  | 32  |         |
-| Member Kicked                | 33  |         |
-| Member Left                  | 34  |         |
-| User Unbanned                | 35  |         |
-| Member TimedOut              | 36  |         |
-| Member Unmuted               | 37  |         |
-| Member Nickname Changed      | 38  |         |
-| Message Deleted              | 39  |         |
-| Attachment Deleted           | 40  |         |
-| Message Edited               | 41  |         |
-| Message Pinned               | 42  |         |
-| Message Unpinned             | 43  |         |
-| Poll Created                 | 44  |         |
-| Poll Ended                   | 45  |         |
-| Members Pruned               | 46  |         |
-| Many Reaction Removed        | 47  |         |
-| Reaction Removed             | 48  |         |
-| Role Taken                   | 49  |         |
-| Role Given                   | 50  |         |
-| SoundBoard Sound Added       | 51  |         |
-| SoundBoard Sound Removed     | 52  |         |
-| SoundBoard Sound Updated     | 53  |         |
-| Stage Raised Hand            | 54  |         |
-| Stage Invited To Speak       | 55  |         |
-| Stage Moved To Audience      | 56  |         |
-| Stage Cancelled Request      | 57  |         |
-| Stage Instance Created       | 58  |         |
-| Stage Instance Deleted       | 59  |         |
-| Stage Instance Updated       | 60  |         |
-| Sticker Added                | 61  |         |
-| Sticker Removed              | 62  |         |
-| Sticker Updated              | 63  |         |
-| Thread Deleted               | 64  |         |
-| Thread Created               | 65  |         |
-| Thread Updated               | 66  |         |
-| Member Voice Joined          | 67  |         |
-| Member Voice Left            | 68  |         |
-| Member Voice Moved           | 69  |         |
-| Member Voice Updated         | 70  |         |
-| Streaming Started            | 71  |         |
-| Streaming Ended              | 71  |         |
-| Camera Started               | 72  |         |
-| Camera Ended                 | 72  |         |
-| Webhook Channel Changed      | 73  |         |
-| Webhook Created              | 74  |         |
-| Webhook Deleted              | 75  |         |
-| Webhook Updated              | 76  |         |
-| Wish Logging Channel Changed | 167 | x       |
-| Wish Ignore Option Changed   | 168 | x       |
-| Wish Option Changed          | 169 | x       |
-| Wish Language Changed        | 170 | x       |
+| **Log Type Name**            | **ID** | **Category** | **Special** |
+| :--------------------------: | :----: | :----------: | :---------: |
+| Automod Triggered            | 1      | Server       |             |
+| Automod Rule Created         | 2      | Server       |             |
+| Automod Rule Updated         | 3      | Server       |             |
+| Automod Rule Deleted         | 4      | Server       |             |
+| Avatar Updated               | 5      | Member       |             |
+| Mass Message Deleted         | 6      | Messages     |             |
+| Channel Followed             | 7      | Channel      |             |
+| Channel Unfollowed           | 8      | Channel      |             |
+| Followed Channel Updated     | 9      | Channel      |             |
+| Channel Deleted              | 10     | Channel      |             |
+| Channel Created              | 11     | Channel      |             |
+| Updated Channel              | 12     | Channel      |             |
+| Emoji Added                  | 13     | Actions      |             |
+| Emoji Removed                | 14     | Actions      |             |
+| Emoji Updated                | 15     | Actions      |             |
+| Server Role Created          | 16     | Role         |             |
+| Server Role Deleted          | 17     | Role         |             |
+| Server Role Updated          | 18     | Role         |             |
+| Server Event Created         | 19     | Actions      |             |
+| Server Event Deleted         | 20     | Actions      |             |
+| Server Event Updated         | 21     | Actions      |             |
+| Server Event User Joined     | 22     | Actions      |             |
+| Server Event User Left       | 23     | Actions      |             |
+| Server Updated               | 24     | Server       |             |
+| Server Updated [Featrue -]   | 25     | Server       |             |
+| Server Updated [Featrue \+]  | 26     | Server       |             |
+| Invite Created               | 27     | Actions      |             |
+| Invite Deleted               | 28     | Actions      |             |
+| Member Ban                   | 29     | Mod Action   |             |
+| Bot Added                    | 30     | Members      |             |
+| User Joined                  | 31     | Members      |             |
+| Bot Removed                  | 32     | Members      |             |
+| Member Kicked                | 33     | Mod Action   |             |
+| Member Left                  | 34     | Members      |             |
+| User Unbanned                | 35     | Mod Action   |             |
+| Member TimedOut              | 36     | Mod Action   |             |
+| Member Unmuted               | 37     | Mod Action   |             |
+| Member Nickname Changed      | 38     | Members      |             |
+| Message Deleted              | 39     | Messages     |             |
+| Attachment Deleted           | 40     | Messages     |             |
+| Message Edited               | 41     | Messages     |             |
+| Message Pinned               | 42     | Messages     |             |
+| Message Unpinned             | 43     | Messages     |             |
+| Poll Created                 | 44     | Server       |             |
+| Poll Ended                   | 45     | Server       |             |
+| Members Pruned               | 46     | Members      |             |
+| Many Reaction Removed        | 47     | Actions      |             |
+| Reaction Removed             | 48     | Actions      |             |
+| Role Taken                   | 49     | Members      |             |
+| Role Given                   | 50     | Members      |             |
+| SoundBoard Sound Added       | 51     | Server       |             |
+| SoundBoard Sound Removed     | 52     | Server       |             |
+| SoundBoard Sound Updated     | 53     | Server       |             |
+| Stage Raised Hand            | 54     | Voice        |             |
+| Stage Invited To Speak       | 55     | Voice        |             |
+| Stage Moved To Audience      | 56     | Voice        |             |
+| Stage Cancelled Request      | 57     | Voice        |             |
+| Stage Instance Created       | 58     | Voice        |             |
+| Stage Instance Deleted       | 59     | Voice        |             |
+| Stage Instance Updated       | 60     | Voice        |             |
+| Sticker Added                | 61     | Actions      |             |
+| Sticker Removed              | 62     | Actions      |             |
+| Sticker Updated              | 63     | Actions      |             |
+| Thread Deleted               | 64     | Messages     |             |
+| Thread Created               | 65     | Messages     |             |
+| Thread Updated               | 66     | Messages     |             |
+| Member Voice Joined          | 67     | Voice        |             |
+| Member Voice Left            | 68     | Voice        |             |
+| Member Voice Moved           | 69     | Voice        |             |
+| Member Voice Updated         | 70     | Voice        |             |
+| Streaming Started            | 71     | Voice        |             |
+| Streaming Ended              | 71     | Voice        |             |
+| Camera Started               | 72     | Voice        |             |
+| Camera Ended                 | 72     | Voice        |             |
+| Webhook Channel Changed      | 73     | Actions      |             |
+| Webhook Created              | 74     | Actions      |             |
+| Webhook Deleted              | 75     | Actions      |             |
+| Webhook Updated              | 76     | Actions      |             |
+| Wish Logging Channel Changed | 167    |              | x           |
+| Wish Ignore Option Changed   | 168    |              | x           |
+| Wish Option Changed          | 169    |              | x           |
+| Wish Language Changed        | 170    |              | x           |
