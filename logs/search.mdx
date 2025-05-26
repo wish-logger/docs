@@ -1,4 +1,43 @@
 ---
-title: "New file"
-description: "Description of your new file."
+title: "Search Through Logs"
+description: "Learn how you can go through old logs and find what you need quickly."
 ---
+
+## **Introduction**
+
+For many servers, Wish sends _a lot_ of logs. However, it is often useful to refer back to a specific older log or group of logs. For this reason, Wish is designed to make the process of finding the logs you need as easy as possible.\
+This page will guide you through the best ways to search through your logs.
+
+## **Searching Through Logs**
+
+Currently, Wish does **not** allow users to search through logs via the website.
+
+All log searches must be done within Discord using [**Discord’s search feature**](https://support.discord.com/hc/en-us/articles/115000468588-Using-Search).
+
+### Understanding Wish's Log Layout
+
+To use discord's search with Wish, you have to understand what the log means, here's a detailed desciption of the "Reaction Removed" log
+
+![Wish Logger1 Pn](/images/WishLogger1.png)
+
+| **Color**  | **Description**                                                                                             |
+| :--------: | :---------------------------------------------------------------------------------------------------------: |
+| Red        | The title of the log (e.g. `Message Deleted`, `Message Edited`). In this case: `Reaction Removed`.          |
+| Blue       | The main description of the log.                                                                            |
+| Light Blue | The ID shown here is either a **User ID** or an **Object ID** (such as a Role, Emoji, Sticker, or Channel). |
+| Orange     | The **Log ID** — a unique ID attached to each log entry.                                                    |
+
+With this knowladge we can focus on actually using this knowladge.
+
+## **Finding logs by user**
+
+**it's pretyy simple, you can grab the ID from the logs (Light Blue)**
+
+<AccordionGroup>
+  <Accordion title="Wish Logger">
+    from: Wish Logger#7935 `USER_ID`
+  </Accordion>
+  <Accordion title="Wish Logger Pro" icon="sparkles">
+    
+  </Accordion>
+</AccordionGroup>
