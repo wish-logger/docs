@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Wish Logger",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#9017a1",
+    "light": "#9706ab",
+    "dark": "#6b1178"
   },
   "favicon": "/wish.webp",
   "navigation": {
