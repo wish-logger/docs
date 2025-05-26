@@ -1,5 +1,107 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Permissions"
+description: "Understanding what permissions Wish Logger needs and why it needs them to provide comprehensive logging for your Discord server."
 ---
 
+## Quick Setup
+
+For the easiest setup, grant Wish Logger **Administrator** permissions. This ensures all logging features work without any permission issues.
+
+<Card title="Invite with Admin" icon="shield-check" color="#22c55e" horizontal href="https://discord.com/oauth2/authorize?client_id=1308500301791105044&permissions=8&scope=bot">
+  Add Wish Logger with Administrator permissions
+</Card>
+
+<Tip>
+  **Recommended:** Administrator permissions eliminate permission conflicts and ensure all features work seamlessly.
+</Tip>
+
+## Essential Permissions
+
+If you prefer granular control, here are the minimum permissions Wish Logger needs:
+
+### Core Permissions (Required)
+
+These permissions are absolutely necessary for basic functionality:
+
+<Card title="View Channels" icon="eye">
+  **Why needed:** To see server channels and monitor events
+  **Without it:** Bot cannot detect any channel activity
+</Card>
+
+<Card title="Send Messages" icon="message">
+  **Why needed:** To send log messages to your designated channels
+  **Without it:** No logs will appear anywhere
+</Card>
+
+<Card title="Read Message History" icon="clock">
+  **Why needed:** To access message content for edit/delete logging
+  **Without it:** Cannot log message edits/deletions or show contexts
+</Card>
+
+### Advanced Logging Permissions
+
+For comprehensive logging coverage, Wish Logger also needs:
+
+<Card title="View Audit Log" icon="scroll">
+  **Why needed:** To get detailed information about moderator actions
+  **Without it:** Very limited information in mod action logs
+</Card>
+
+<Card title="Manage Webhooks" icon="webhook">
+  **Why needed:** To get information about webhooks
+
+  **Without it:** Logs work but may be less efficient
+</Card>
+
+### Moderation-Related Permissions
+
+These permissions enhance mod action logging:
+
+<Card title="Ban Members" icon="hammer">
+  **Why needed:** To ban members via command
+
+  **Without it:** Wish cannot ban members
+</Card>
+
+<Card title="Kick Members" icon="user-clock">
+  **Why needed:** To ban members via command
+  **Without it:** Wish cannot kick members
+</Card>
+
+<Card title="Moderate Members" icon="shield">
+  **Why needed:** To timeout/unmute users properly 
+
+  **Without it:** Wish cannot timeout/unmute members
+</Card>
+
+### Server Management Permissions
+
+For server-wide change logging:
+
+<Card title="Manage Channels" icon="hashtag">
+  **Why needed:** To log channel creation, deletion, and modifications
+  **Without it:** No channel change logs
+</Card>
+
+<Card title="Manage Roles" icon="crown">
+  **Why needed:** To log role changes and permission updates
+  **Without it:** Cannot track role modifications
+</Card>
+
+<Card title="Manage Guild" icon="server">
+  **Why needed:** To log server setting changes
+  **Without it:** Limited server modification logging
+</Card>
+
+<Card title="Manage Messages" icon="message">
+  **Why needed:** To log message management actions
+  **Without it:** Cannot detect bulk message deletions, message edits and deletions
+</Card>
+
+<Card title="Manage Emojis and Stickers" icon="icons">
+  **Why needed:** To log emoji and sticker changes
+  **Without it:** No emoji/sticker modification logs
+</Card>
+
+
+**Still having permission issues?** Check our [Troubleshooting Guide](/general/debugging) or contact support for personalized help.
