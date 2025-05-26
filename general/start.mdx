@@ -3,10 +3,6 @@ title: "Quick Start"
 description: "Get Wish Logger running in your Discord server in under 5 minutes"
 ---
 
-# Quick Start Guide
-
-Get Wish Logger up and running in your Discord server with this step-by-step guide. No technical knowledge required\!
-
 ## Step 1: Invite Wish Logger
 
 <Card title="Add to Discord" icon="circle-plus" color="#5865f2" horizontal href="https://discord.com/oauth2/authorize?client_id=1308500301791105044&permissions=8&scope=bot">
@@ -62,10 +58,14 @@ Choose where you want your logs to appear:
 
 1. **~~Click "Auto Setup"~~** ~~in the dashboard~~
 2. **~~Let Wish Logger create channels~~** ~~— We'll automatically create organized logging channels:~~
-   - `#message-logs`
+   - `#mod-action-logs`
    - `#member-logs`
+   - `#messages-logs` 
    - `#voice-logs`
-   - `#server-logs`
+   - `#actions-logs`
+   - `#server-logs` 
+   - `#roles-logs` 
+   - `#channel-logs`
 3. **~~Review and confirm~~** ~~the channel setup~~
 
 ### Option B: Manual Setup (Recommended)
@@ -131,15 +131,12 @@ Now that Wish Logger is running, explore these advanced features:
 
 <AccordionGroup>
   <Accordion title="Why aren't my logs showing up?">
-    **Check these common issues:** 
+    **Check these common issues:**
 
-    - Wish Logger has permissions to send messages in your log channels 
-
-    - You've assigned channels in the dashboard for each log type 
-
+    - Wish Logger has permissions to send messages in your log channels
+    - You've assigned channels in the dashboard for each log type
     - The events you're testing are actually being logged (some events are not possible to log due to discord limitations)
-
-     - Try the `/ping` command to verify the bot is responding
+    - Try the `/ping` command to verify the bot is responding
   </Accordion>
   <Accordion title="What happens if I kick the bot and re-add it?">
     You'll need to reconfigure your log channels in the dashboard. The bot doesn't remember previous settings after being removed from a server.
@@ -152,11 +149,11 @@ Now that Wish Logger is running, explore these advanced features:
 
     However, due to the "high" volume of logs (about **500** messages **per day**), we have to set some limits. The formula below calculates the likelihood of saving a message to the database:
 
-                                 messageCacheLimit = 20000 · (1 / (1 \+ (x/(1-x))²)) \+ 200
+    messageCacheLimit = 20000 · (1 / (1 \+ (x/(1-x))²)) \+ 200
 
-                                                 -----------------------------------
+    ---
 
-                                                     x = memberCount / 500000
+    x = memberCount / 500000
 
     Where x is the member count of your server divided by 500,000.
 
