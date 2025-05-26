@@ -58,9 +58,9 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://docs.wishlogger.xyz/",
-          "icon": "book-open-cover"
+          "anchor": "Invite",
+          "href": "https://discord.com/oauth2/authorize?client_id=1308500301791105044&permissions=8&scope=bot",
+          "icon": "invite"
         },
         {
           "anchor": "Community",
@@ -71,6 +71,11 @@
           "anchor": "Blog",
           "href": "https://wishlogger.xyz/blog",
           "icon": "newspaper"
+        },
+        {
+          "anchor": "Edit Docs",
+          "href": "https://github.com/wish-logger/docs",
+          "icon": "discord"
         }
       ]
     }
