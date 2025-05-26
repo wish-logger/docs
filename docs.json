@@ -63,6 +63,11 @@
           "icon": "plus"
         },
         {
+          "anchor": "Inventory",
+          "href": "https://wishlogger.xyz/inventory",
+          "icon": "box"
+        },
+        {
           "anchor": "Community",
           "href": "https://discord.com/invite/FRY3NfzgFJ",
           "icon": "slack"
