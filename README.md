@@ -1,32 +1,29 @@
-# Mintlify Starter Kit
+# Wish Logger - Documentation
 
-Click on `Use this template` to copy the Mintlify starter kit. The starter kit contains examples including
+Welcome to the official documentation for **Wish Logger** – a moderation and logging bot for Discord.
 
-- Guide pages
-- Navigation
-- Customizations
-- API Reference pages
-- Use of popular components
+This documentation provides:
 
-### Development
+- Setup instructions
+- Bot usage guides
+- ~~API references~~
+- Contributor notes
+- Error handling
+- And much more...
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the documentation changes locally. To install, use the following command
+## 🚀 What is Wish Logger?
 
-```
-npm i -g mintlify
-```
+**Wish Logger** is a Discord bot built for logging messages, users, channels, moderation actions, and more. It integrates smoothly with other tools and is designed to be fast, reliable, and easy to extend.
 
-Run the following command at the root of your documentation (where docs.json is)
+## 📂 Repository Info
 
-```
-mintlify dev
-```
+This repository is public and contains the full documentation for the bot. It is intended for:
 
-### Publishing Changes
+- Server admins and moderators who want to configure and use Wish Logger
+- Server owners looking for a powerful moderation and logging solution
 
-Install our Github App to auto propagate changes from your repo to your deployment. Changes will be deployed to production automatically after pushing to the default branch. Find the link to install on your dashboard. 
+## 🛠️ Getting Started
 
-#### Troubleshooting
+Check out the [Getting Started](getting-started.md) page for installation and setup.
 
-- Mintlify dev isn't running - Run `mintlify install` it'll re-install dependencies.
-- Page loads as a 404 - Make sure you are running in a folder with `docs.json`
+Need help or want to contribute to the docs? Open an issue or pull request on [GitHub](https://github.com/your-repo-link-here).
