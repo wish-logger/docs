@@ -60,7 +60,7 @@
         {
           "anchor": "Invite",
           "href": "https://discord.com/oauth2/authorize?client_id=1308500301791105044&permissions=8&scope=bot",
-          "icon": "invite"
+          "icon": "plus"
         },
         {
           "anchor": "Community",
