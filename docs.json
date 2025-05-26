@@ -16,7 +16,7 @@
           {
             "group": "Get Started",
             "pages": [
-              "general/introduction",
+              "introduction",
               "general/start",
               "general/permissions",
               "general/debugging"
