@@ -129,33 +129,42 @@ Now that Wish Logger is running, explore these advanced features:
 
 ## Common Questions
 
-<Accordion>
-  <AccordionItem title="Why aren't my logs showing up?">
-  **Check these common issues:**
+<AccordionGroup>
+  <Accordion title="Why aren't my logs showing up?">
+    **Check these common issues:** 
 
-  * Wish Logger has permission to send messages in your log channels
-  * You've assigned channels in the dashboard for each log type
-  * The events you're testing are actually being logged (some events require specific permissions)
-  * Try the `/test` command to verify the bot is responding
-</AccordionItem>
+    - Wish Logger has permissions to send messages in your log channels 
 
-  <AccordionItem title="Can I change my logging channels later?">
-  **Yes!** You can change your logging channels anytime through the dashboard. Just:
+    - You've assigned channels in the dashboard for each log type 
 
-  1. Go to [wishlogger.xyz/dashboard](https://wishlogger.xyz/dashboard)
-  2. Select your server
-  3. Choose new channels for any log type
-  4. Save your changes
-</AccordionItem>
+    - The events you're testing are actually being logged (some events are not possible to log due to discord limitations)
 
-  <AccordionItem title="Do I need to keep the dashboard open?">
-  **No.** Once you've configured your settings, Wish Logger works automatically. The dashboard is only needed for initial setup and making changes.
-</AccordionItem>
+     - Try the `/ping` command to verify the bot is responding
+  </Accordion>
+  <Accordion title="What happens if I kick the bot and re-add it?">
+    You'll need to reconfigure your log channels in the dashboard. The bot doesn't remember previous settings after being removed from a server.
+  </Accordion>
+  <Accordion title="Does it work with other bots like MEE6, Dyno, Carl-bot?">
+    **Yes\!** Wish Logger works alongside other bots without conflicts. It focuses purely on logging and won't interfere with your existing moderation or utility bots as long as you disable the "Ignore Bots" settings in the dashboard
+  </Accordion>
+  <Accordion title="Does the bot store my messages permanently?">
+    Wish stores message data for **28 days** using the following process: Discord, after a certain time, only sends the message ID, not the content, attachments, or other information. We save the message data during this time so we can log it later.
 
-  <AccordionItem title="What if I want to stop logging certain events?">
-  You can disable specific log types or set up filters through the dashboard. Visit the [Filter System](/docs/filters) documentation for detailed instructions.
-</AccordionItem>
-</Accordion>
+    However, due to the "high" volume of logs (about **500** messages **per day**), we have to set some limits. The formula below calculates the likelihood of saving a message to the database:
+
+                                 messageCacheLimit = 20000 · (1 / (1 \+ (x/(1-x))²)) \+ 200
+
+                                                 -----------------------------------
+
+                                                     x = memberCount / 500000
+
+    Where x is the member count of your server divided by 500,000.
+
+    If a message isn't logged within Discord's timeframe, it won't appear in the logs. However, if the message is logged after this timeout, the deletion event will still be posted with the correct data. However, **servers that are using Premium** have **different behavior.** Premium servers are **exempt from message caching limits and have guaranteed message logging for all events.**
+
+    Please note that there is **one exception**: messages will only be logged if the server has more than **150 members** (<u>excluding bots</u>).
+  </Accordion>
+</AccordionGroup>
 
 ---
 
