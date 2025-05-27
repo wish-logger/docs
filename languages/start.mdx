@@ -1,5 +1,51 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Start"
+description: "Get started with translating"
 ---
 
+## **Start Translating**
+
+Currently, Wish uses GitHub to manage all of its language files. If you want to help translate Wish into your language, here's how to begin.
+
+## **How to Contribute**
+
+<Steps>
+  <Step title="Open the Wish language repository" stepNumber={1}>
+    Click [here](https://github.com/wish-logger/languages) to access the GitHub repository where all language files are stored.
+  </Step>
+  <Step title="Download the English, US language pack">
+    Every new translation should begin with the `English, US` [pack](https://github.com/wish-logger/languages/tree/main/languages/en_us).
+
+    Make sure that you have the following folders:
+
+    - `base`
+    - `generic`
+    - `slash`
+
+    Inside these folders, you’ll find JSON files to translate. Here's an example from `/base/party.json`:
+
+    ```json
+    "StickerAddedTitle": "{emoji} Sticker Added",
+    "StickerAdded": "`{sticker}` was added by {user}",
+    "StickerRemovedTitle": "{emoji} Sticker Removed",
+    "StickerRemoved": "`{sticker}` was removed by {user}",
+    ```
+
+    You should **only** translate the text **after the colon** (`:`).\
+    Do **not** edit the keys (e.g. `"StickerAddedTitle"`) or any placeholder in curly brackets like `{user}`, `{emoji}`, or `{sticker}`.
+  </Step>
+  <Step title="Submit your translation">
+    Once your translation is ready, you can either:
+
+    - Create a pull request on GitHub
+    - Or send the files directly to `_impulse.dev` on Discord
+
+    Your translation will be added in the next major update.\
+    Keep in mind that if the `English, US` pack is updated, you’ll need to update your translation accordingly.
+  </Step>
+  <Step title="You're done!">
+    After your language is added to Wish, you’ll receive the Translator role in our Discord server (if you're there).
+
+    Please don’t use AI or automated tools like Google Translate if you don’t understand the language — we trust our contributors to provide accurate translations.
+  </Step>
+</Steps>
