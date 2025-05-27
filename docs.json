@@ -23,6 +23,13 @@
             ]
           },
           {
+            "group": "Commands",
+            "pages": [
+              "commands/introduction",
+              "commands/list"
+            ]
+          },
+          {
             "group": "Logs",
             "pages": [
               "logs/types",
