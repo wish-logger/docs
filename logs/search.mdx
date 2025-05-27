@@ -1,42 +1,98 @@
 ---
-title: "Search Through Logs"
+title: "Search"
 description: "Learn how you can go through old logs and find what you need quickly."
 ---
 
 ## **Introduction**
 
-Wish generates a large number of logs on many servers. Often, looking back at a specific log or set of logs can be helpful. To make this easier, Wish is built to simplify the process of locating and reviewing past logs. This guide will walk you through the most effective ways to search your logs.
+Wish produces a high volume of logs across many servers. Being able to locate a specific entry or group of entries can be very helpful. That’s why Wish is designed to make it easier to track down the logs you’re looking for.\
+This guide explains the best way to do that.
 
 ## **Searching Through Logs**
 
-At this time, Wish does **not** support searching logs through its website.
+At present, logs cannot be searched through the Wish website.
 
-All searches must be performed directly in Discord using [Discord’s built-in search tool](https://support.discord.com/hc/en-us/articles/115000468588-Using-Search).
+Instead, you'll need to use [Discord's native search feature](https://support.discord.com/hc/en-us/articles/115000468588-Using-Search) directly within the app.
 
 ### Understanding Wish's Log Layout
 
-To effectively search with Discord’s search function, it’s important to understand how Wish structures its logs. Below is a breakdown of how to read the **"Reaction Removed"** log, which serves as an example for interpreting others.
+To search efficiently, it helps to understand how logs are structured in Wish. Below is an explanation of each element using the **"Reaction Removed"** log as an example:
 
 ![Wish Logger1 Pn](/images/WishLogger1.png)
 
-| **Color**  | **Description**                                                                                             |
-| :--------: | :---------------------------------------------------------------------------------------------------------: |
-| Red        | The title of the log (e.g. `Message Deleted`, `Message Edited`). In this case: `Reaction Removed`.          |
-| Blue       | The main description of the log.                                                                            |
-| Light Blue | The ID shown here is either a **User ID** or an **Object ID** (such as a Role, Emoji, Sticker, or Channel). |
-| Orange     | The **Log ID** — a unique ID attached to each log entry.                                                    |
+| **Color**  | **Description**                                                                                       |
+| :--------: | :---------------------------------------------------------------------------------------------------: |
+| Red        | The name of the event (e.g. `Message Deleted`, `Message Edited`). In this case: `Reaction Removed`.   |
+| Blue       | The main content or summary of the log.                                                               |
+| Light Blue | A unique number identifying the user or object involved — such as a role, emoji, sticker, or channel. |
+| Orange     | The log’s unique numerical ID — each log entry has its own.                                           |
 
-With this knowladge we can focus on actually using this knowladge.
+With that background covered, let’s go over how to use this knowledge.
 
-## **Finding logs by user**
+## **Finding Logs by User**
 
-**it's pretty simple, you can grab the ID from the logs (Light Blue)**
+To look up logs related to a specific person, you'll need their **user ID** — a numerical identifier Discord assigns to every user. (Shown in Light Blue)
 
 <AccordionGroup>
-  <Accordion title="Wish Logger">
+  <Accordion title="Wish Logger" defaultOpen>
     from: Wish Logger#7935 `USER_ID`
   </Accordion>
   <Accordion title="Wish Logger Pro">
-    
+    from: Wish Logger Pro#0631 `USER_ID`
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  Don’t forget to replace `USER_ID` with the actual ID of the user you want to find logs for\!
+</Tip>
+
+## **Finding Logs by Role**
+
+To find actions related to a role, first obtain that role’s **ID number** — also shown in Light Blue.
+
+<AccordionGroup>
+  <Accordion title="Wish Logger" defaultOpen>
+    from: Wish Logger#7935 `ROLE_ID`
+  </Accordion>
+  <Accordion title="Wish Logger Pro">
+    from: Wish Logger Pro#0631 `ROLE_ID`
+  </Accordion>
+</AccordionGroup>
+
+## **Finding Logs by Channel**
+
+Searching by channel works the same way: grab the channel’s **unique ID** and use it in Discord search.
+
+<AccordionGroup>
+  <Accordion title="Wish Logger" defaultOpen>
+    from: Wish Logger#7935 `CHANNEL_ID`
+  </Accordion>
+  <Accordion title="Wish Logger Pro">
+    from: Wish Logger Pro#0631 `CHANNEL_ID`
+  </Accordion>
+</AccordionGroup>
+
+## **Finding Specific Log Types by User**
+
+To narrow it down even further — for example, to find a certain type of log involving a specific user — you’ll need both their **user ID** and the **log type**.\
+You can find all available log types on our [**log types page**](/logs/types).
+
+Here’s a quick refresher on log layout:
+
+![Wish Logger1 Pn](/images/WishLogger1.png)
+
+| **Color**  | **Description**                                                                                   |
+| :--------: | :-----------------------------------------------------------------------------------------------: |
+| Red        | The name of the log (e.g. `Message Deleted`, `Message Edited`). In this case: `Reaction Removed`. |
+| Blue       | A short summary of what happened.                                                                 |
+| Light Blue | The ID of the user or object affected — this could be a role, emoji, sticker, or channel.         |
+| Orange     | A numeric log ID that is unique to each entry.                                                    |
+
+<AccordionGroup>
+  <Accordion title="Wish Logger" defaultOpen>
+    from: Wish Logger#7935 `USER_ID` `LOG_ID`
+  </Accordion>
+  <Accordion title="Wish Logger Pro">
+    from: Wish Logger Pro#0631 `USER_ID` `LOG_ID`
   </Accordion>
 </AccordionGroup>
