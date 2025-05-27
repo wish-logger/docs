@@ -1,5 +1,40 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Behaviour"
+description: "Learn how Wish handles data retention"
 ---
 
+Wish collects a large amount of data, but none of it is stored forever.
+
+\
+This page explains how Wish determines what data is kept. As mentioned on the [**Storage**](/data/storage) page, messages are stored shortly after they are sent in your Discord server.
+
+\
+Below, you’ll learn what influences that decision.
+
+## **Message Retention Logic**
+
+### **For Non-Pro Servers**
+
+Whether a message gets saved or not depends on two key conditions:
+
+- A logging channel is configured
+- The Message Author, Role, Message Content, Channel isn’t excluded via **Ignore Settings**
+
+Even if both checks pass, saving a message isn't guaranteed.\
+Wish uses a dynamic formula to determine message caching based on your server’s size.
+
+                             messageCacheLimit = 20000 · (1 / (1 \+ (x / (1 - x))²)) \+ 200
+
+                                         Where: x = (number of members) / 500000
+
+This allows larger servers to have proportionally more message caching capacity, while keeping limits practical for smaller ones.
+
+### **For Pro Servers**
+
+Wish Pro simplifies the rules. Messages will be stored if **all** of the following apply:
+
+- A logging channel is set up
+- The Message Author, Role, Message Content, Channel isn’t excluded via **Ignore Settings**
+- The server has **over 150 members** (bots excluded)
+
+No formula is used here — once these checks are met, the message is always saved.

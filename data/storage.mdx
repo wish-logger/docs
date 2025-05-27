@@ -1,5 +1,51 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Storage"
+description: "Learn how Wish stores your data"
 ---
 
+Wish handles and stores a significant amount of data, which naturally raises questions about privacy.\
+This page outlines how Wish stores that data, what steps are taken to protect it, and how you remain in control of your information.
+
+## How Data Is Stored?
+
+### Files
+
+Wish does **not** store uploaded files like images, videos, audio clips, or documents.\
+Instead, it only retains the **publicly accessible link** to these files, which are hosted on Discord's own CDN.
+
+A typical file link will look like this:
+
+https://cdn.discordapp.com/attachments/{channel_id}/{attachment_id}/{filename}
+
+This URL includes:
+
+- The `channel_id` where the file was posted
+- The `attachment_id` of the file
+- The file's name at the end
+
+Anyone with this link can access the file, even outside of Discord.
+
+### Messages
+
+Messages logged by Wish are retained for **28 days**, after which they are **automatically removed** from the database.\
+You can find more about this retention policy on the [**Data Behaviour**](/data/behaviour) page.
+
+Shortly after being received, messages are transferred to long-term encrypted storage.\
+Wish uses **AES-256** encryption, with keys that are generated dynamically based on the message's metadata — such as the message ID and channel ID. This ensures each message is uniquely protected.
+
+### Other Data
+
+Wish also logs other information such as:
+
+- **Stickers** and **emojis**
+- **Webhooks**
+- **User info** like <u>server nicknames,</u> <u>join timestamps,</u> and <u>moderation history</u>
+
+Like messages, this data is encrypted using **AES-256**.\
+The encryption key is generated on-the-fly using relevant context — for example:
+
+- The ID of the emoji/sticker
+- The server where an event took place
+- The moderator responsible for an action
+
+This ensures every item is stored securely and uniquely, even if similar data is logged across different servers or events.
