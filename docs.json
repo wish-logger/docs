@@ -50,8 +50,7 @@
             "group": "Languages",
             "pages": [
               "languages/introduction",
-              "languages/start",
-              "languages/adding"
+              "languages/start"
             ]
           }
         ]
