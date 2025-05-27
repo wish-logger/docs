@@ -30,6 +30,29 @@
               "logs/search",
               "logs/customization"
             ]
+          },
+          {
+            "group": "Data",
+            "pages": [
+              "data/introduction",
+              "data/storage",
+              "data/behaviour"
+            ]
+          },
+          {
+            "group": "Subscription",
+            "pages": [
+              "subscription/introduction",
+              "subscription/behaviour"
+            ]
+          },
+          {
+            "group": "Languages",
+            "pages": [
+              "languages/introduction",
+              "languages/start",
+              "languages/adding"
+            ]
           }
         ]
       }
