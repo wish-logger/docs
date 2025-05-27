@@ -69,6 +69,11 @@
           "icon": "box"
         },
         {
+          "anchor": "Website",
+          "href": "https://wishlogger.xyz/",
+          "icon": "webhook"
+        },
+        {
           "anchor": "Community",
           "href": "https://discord.com/invite/FRY3NfzgFJ",
           "icon": "slack"
