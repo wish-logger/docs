@@ -9,20 +9,22 @@ Wish handles and stores a significant amount of data, which naturally raises que
 
 ### Files
 
-Wish does **not** store uploaded files like images, videos, audio clips, or documents.\
-Instead, it only retains the **publicly accessible link** to these files, which are hosted on Discord's own CDN.
+**Wish** stores uploaded files such as **images**, **videos**, **audio clips**, and **documents** for up to **4 weeks**.
 
-A typical file link will look like this:
+When a file is sent, Wish checks whether the message qualifies for storage in the **4-week logging database**.
 
-`https://cdn.discordapp.com/attachments/{channel_id}/{attachment_id}/{filename}`
+- If Wish determines the message is **not eligible**, neither the message nor its attachments will be saved.
+- If it **is eligible**, Wish will:
+  - **Compress and encrypt** the attachments
+  - Upload the media securely to **R2 storage**
+  - Link the file to the original message in the database
 
-This URL includes:
+If the message is **deleted within 4 weeks**, all associated attachments will be **immediately erased**.\
+After the 4-week period, attachments are **automatically removed** from our services.
 
-- The `channel_id` where the file was posted
-- The `attachment_id` of the file
-- The file's name at the end
+Additionally, Wish will mark the file as **expired**. 
 
-Anyone with this link can access the file, even outside of Discord.
+In short, Wish will display `Couldn't fetch an image` instead of the original file.
 
 ### Messages
 
