@@ -1,0 +1,222 @@
+---
+title: "Warnings Manual [NOT FINISHED]"
+description: "Complete overview of our robust warning system. Start managing member discipline effectively!"
+---
+
+## Basics
+
+Learn the fundamentals of our warning system with this essential information. Every server has a limit of **150** warnings, with the option to extend this limit by purchasing Wish Pro. Each warning has a unique `Case ID` that is used to modify the warning. To access commands under `/warn`, your moderator must have permissions to **Modify, Accept and Reject Members** (formerly Moderate Members).
+
+<Warning>
+  Ensure that Wish has the proper permissions to send messages in your server.
+</Warning>
+
+### Adding, Removing, and Updating Warnings via Bot
+
+Wish has one primary method for adding warnings: the command `/warn add [member] [reason] [category]`. Both reason and category are optional parameters. If no reason is specified, it will default to "No reason provided." If no category is specified, it will be marked as **OTHER**.
+
+Here's the complete list of available categories:
+
+```
+BAD_BEHAVIOR: 'Bad Behavior'
+SPAM: 'Spam'
+NSFW: 'NSFW Content'
+LANGUAGE: 'Inappropriate Language'
+RULES: 'Breaking Rules'
+OTHER: 'Other'
+HARASSMENT: 'Harassment / Bullying'
+HATE_SPEECH: 'Hate Speech / Discrimination'
+ADVERTISING: 'Unwanted Advertising'
+IMPERSONATION: 'Impersonation'
+CHEATING: 'Cheating / Exploiting'
+PRIVACY: 'Sharing Private Information'
+THREATS: 'Threats / Violence'
+MALWARE: 'Malware / Harmful Links'
+TROLLING: 'Trolling / Provocation'
+ILLEGAL: 'Illegal Content or Activity'
+```
+
+If you don't have an active logging channel set up, Wish will always warn you before adding any warnings that the information is limited. Warnings are categorized under the `Members` section.
+
+As mentioned earlier, Case IDs are extremely important. Every warning has a `Case ID` - a randomly generated string of 6 numbers. This allows you to delete, transfer, and edit warnings comprehensively. To delete a warning, use `/warn delete [member] [caseid] [reason]`. If no reason is provided, the log will show "No Reason Provided." The `Case ID` is visible on **every** log connected to warnings.
+
+You can modify warnings in two different ways:
+
+**Transfer Command:** `/warn transfer [member] [newmember] [caseid] [reason]`
+This command may seem complex but is actually straightforward\! The first parameter is the member from whom you want to remove a warning. The `newmember` parameter is the member who will receive the warning. `Case ID` is the ID of the warning you want to transfer. The additional reason provides clarification for the action, such as "I misspelled the username and added the warning to the wrong person." You can leave this field empty if desired.
+
+**Change Command:** `/warn change [member] [caseid] [newreason]`
+This is similar to transferring. Simply specify the member who has the warning, the warning ID, and the new reason for the warning.
+
+### Viewing Server Warnings, Exporting, and User-Specific Warnings
+
+To view all warnings for your entire server, use `/warn all`. This displays a sleek, rich embed showing every detail of your server's warnings. To view user-specific warnings, use `/warn list [member]` to see the exact warnings for the selected member.
+
+If you want to export your entire server's warnings, use `/warn export`. To export warnings for a specific member, use the same `/warn export [member]` command but specify the member in the `[member]` option.
+
+### What's Next?
+
+There's much more planned for the warning system\! We want to add more features over time. Here are some ideas we want to implement first:
+
+- Adding warnings via the website
+- Performing actions based on the number of warnings a user has
+- Flagging user accounts in moderation logs based on warning count
+- And much more\!
+
+## Advanced
+
+You've mastered the basics and covered every feature Wish offers in the Discord app. Now let's explore our website, which allows you to view, modify, delete, and filter warnings without using commands.
+
+<Info>
+  This section contains images from the https://wishlogger.xyz website. As an owner, I have every feature unlocked. Don't worry if some features aren't visible from your perspective.
+</Info>
+
+### Managing Warnings Through the Web Interface
+
+Let's start by understanding the warning structure within the warning system editor.
+
+Every warning you issue will appear as a **warning card** displaying most of the essential information:
+
+<img
+  src="/images/mainview.png"
+  alt="Main Warning View"
+  title="Main Warning View"
+  style={{ width:"31%" }}
+  className="mx-auto"
+/>
+
+Here's a more detailed breakdown:
+
+<img
+  src="/images/detailedmainview.png"
+  alt="Detailed Warning View"
+  title="Detailed Warning View"
+  style={{ width:"35%" }}
+  className="mx-auto"
+/>
+
+**Color-Coded Information:**
+
+- **Orange:** User nickname and their ID
+- **Blue:** Case ID
+- **Yellow:** Warning reason
+- **Light Blue:** Indicates if the warning was added by the system (Wish Logger Bot) or by another moderation bot with open API support
+- **Green:** The moderator who issued the warning. Hover over the avatar to see the user's nickname
+
+<img
+  src="/images/modinfohover.png"
+  alt="Moderator Info on Hover"
+  title="Moderator Info on Hover"
+  style={{ width:"27%" }}
+  className="mx-auto"
+/>
+
+### Interactive Warning Cards
+
+Hovering over any warning card reveals 5 action buttons on the left side:
+
+<img
+  src="/images/warncardtooltip.png"
+  alt="Warning Card Actions"
+  title="Warning Card Actions"
+  className="mx-auto"
+  style={{ width:"20%" }}
+/>
+
+**Available Actions (from bottom to top):**
+
+**1. Delete Warning**
+Always prompts with a confirmation dialog: "Are you sure you want to delete this warning?"
+
+<img
+  src="/images/deletewarningpromp.png"
+  alt="Delete Warning Confirmation"
+  title="Delete Warning Confirmation"
+  className="mx-auto"
+  style={{ width:"57%" }}
+/>
+
+**2. Edit Reason**
+Modify the warning reason, functioning like the `warn change` command:
+
+<img
+  src="/images/editreasonprompt.png"
+  alt="Edit Reason Dialog"
+  title="Edit Reason Dialog"
+  className="mx-auto"
+  style={{ width:"54%" }}
+/>
+
+**3. Transfer Warning**
+Move the warning from one member to another:
+
+<img
+  src="/images/transferwarningprompt.png"
+  alt="Transfer Warning Dialog"
+  title="Transfer Warning Dialog"
+  className="mx-auto"
+  style={{ width:"55%" }}
+/>
+
+**Transfer Process:**
+
+1. Type the username of the target member (e.g., "thx" for "thximpulse")
+2. Click the green search button to find members with similar usernames
+3. Select your target member from the results
+4. The **Transfer Warning** button becomes available to click
+
+<img
+  src="/images/transfterwarningpromptpicked.png"
+  alt="Transfer Warning with Selected Member"
+  title="Transfer Warning with Selected Member"
+  className="mx-auto"
+  style={{ width:"45%" }}
+/>
+
+**4. Copy Warning ID**
+Copies the warning ID to your clipboard (e.g., `663010`)
+
+**5. Advanced Warning View**
+Opens a comprehensive view of the warning:
+
+<img
+  src="/images/seeprompt.png"
+  alt="Advanced Warning View"
+  title="Advanced Warning View"
+  className="mx-auto"
+  style={{ width:"86%" }}
+/>
+
+This detailed view allows you to:
+
+- Review the complete warning information quickly
+- Copy essential details by clicking the gray button (copies format: `Warning #663010 | vortexi__ | No reason provided`)
+- Directly transfer, edit, or delete the warning
+
+### Understanding Warning Types
+
+You may notice "System warning" indicators with shield icons. This means the warning was issued by Wish Logger itself. Warnings can also have an "Integrated warning" status, indicating they were added by another supported moderation bot.
+
+**Issuer Filter Options:**
+
+<img
+  src="/images/issuerview.png"
+  alt="Issuer Filter View"
+  title="Issuer Filter View"
+  className="mx-auto"
+  style={{ width:"46%" }}
+/>
+
+Available filter options:
+
+- **All Issuers:** Shows all warnings regardless of source
+- **System Warnings:** Warnings issued by Wish Logger
+- **Integrations:** Warnings from other supported bots
+- **Moderators:** Warnings issued by human moderators
+
+<Note>
+  Moderator entries are automatically added when a moderator issues a warning. Moderator avatars may show only the first letter of their username instead of their profile picture to optimize rate limits and performance.
+</Note>
+
+
+#               MORE COMMING SOON
