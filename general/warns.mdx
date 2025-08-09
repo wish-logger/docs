@@ -1,5 +1,5 @@
 ---
-title: "Warnings Manual [NOT FINISHED]"
+title: "Warnings Manual"
 description: "Complete overview of our robust warning system. Start managing member discipline effectively!"
 ---
 
@@ -43,9 +43,11 @@ As mentioned earlier, Case IDs are extremely important. Every warning has a `Cas
 You can modify warnings in two different ways:
 
 **Transfer Command:** `/warn transfer [member] [newmember] [caseid] [reason]`
-This command may seem complex but is actually straightforward\! The first parameter is the member from whom you want to remove a warning. The `newmember` parameter is the member who will receive the warning. `Case ID` is the ID of the warning you want to transfer. The additional reason provides clarification for the action, such as "I misspelled the username and added the warning to the wrong person." You can leave this field empty if desired.
+
+This command may seem complex but is actually straightforward! The first parameter is the member from whom you want to remove a warning. The `newmember` parameter is the member who will receive the warning. `Case ID` is the ID of the warning you want to transfer. The additional reason provides clarification for the action, such as "I misspelled the username and added the warning to the wrong person." You can leave this field empty if desired.
 
 **Change Command:** `/warn change [member] [caseid] [newreason]`
+
 This is similar to transferring. Simply specify the member who has the warning, the warning ID, and the new reason for the warning.
 
 ### Viewing Server Warnings, Exporting, and User-Specific Warnings
@@ -56,12 +58,12 @@ If you want to export your entire server's warnings, use `/warn export`. To expo
 
 ### What's Next?
 
-There's much more planned for the warning system\! We want to add more features over time. Here are some ideas we want to implement first:
+There's much more planned for the warning system! We want to add more features over time. Here are some ideas we want to implement first:
 
 - Adding warnings via the website
 - Performing actions based on the number of warnings a user has
 - Flagging user accounts in moderation logs based on warning count
-- And much more\!
+- And much more!
 
 ## Advanced
 
@@ -126,6 +128,7 @@ Hovering over any warning card reveals 5 action buttons on the left side:
 **Available Actions (from bottom to top):**
 
 **1. Delete Warning**
+
 Always prompts with a confirmation dialog: "Are you sure you want to delete this warning?"
 
 <img
@@ -137,6 +140,7 @@ Always prompts with a confirmation dialog: "Are you sure you want to delete this
 />
 
 **2. Edit Reason**
+
 Modify the warning reason, functioning like the `warn change` command:
 
 <img
@@ -148,6 +152,7 @@ Modify the warning reason, functioning like the `warn change` command:
 />
 
 **3. Transfer Warning**
+
 Move the warning from one member to another:
 
 <img
@@ -174,9 +179,11 @@ Move the warning from one member to another:
 />
 
 **4. Copy Warning ID**
+
 Copies the warning ID to your clipboard (e.g., `663010`)
 
 **5. Advanced Warning View**
+
 Opens a comprehensive view of the warning:
 
 <img
@@ -218,5 +225,170 @@ Available filter options:
   Moderator entries are automatically added when a moderator issues a warning. Moderator avatars may show only the first letter of their username instead of their profile picture to optimize rate limits and performance.
 </Note>
 
+### Basic Filtering Options
 
-#               MORE COMMING SOON
+Let's explore the filtering system. Most of the time, you'll work with the basic filtering interface:
+
+<img
+  src="/images/filters.png"
+  alt="Basic Filters Interface"
+  title="Basic Filters Interface"
+  className="mx-auto"
+  style={{ width:"29%" }}
+/>
+
+**Filter Options (from top to bottom):**
+
+**1. General Search**
+
+This allows you to search by either reason or username. The system will look for similar nicknames and reasons that match your query.
+
+**2. Issuer Filter**
+
+As mentioned above, this filters warnings by who issued them.
+
+**3. Time Period**
+
+Choose from predefined time ranges:
+
+<img
+  src="/images/filterstime.png"
+  alt="Time Period Filter"
+  title="Time Period Filter"
+  className="mx-auto"
+  style={{ width:"45%" }}
+/>
+
+Available time period options:
+
+- **All Time:** Shows all warnings ever issued
+- **Last 7 Days:** Warnings from the past week
+- **Last 30 Days:** Warnings from the past month
+- **Today:** Only warnings issued today
+
+**4. Sort By**
+
+Control the order in which warnings are displayed:
+
+<img
+  src="/images/filterssort.png"
+  alt="Sort Options"
+  title="Sort Options"
+  className="mx-auto"
+  style={{ width:"41%" }}
+/>
+
+Sort options:
+
+- **Newest First:** Most recent warnings appear first
+- **Oldest First:** Oldest warnings appear first
+
+### Advanced Filtering and Export Features
+
+For more granular control over your warning filters, click the button to the right of the "Filters" text to reveal advanced options:
+
+<img
+  src="/images/showadvancedfilters.png"
+  alt="Show Advanced Filters Button"
+  title="Show Advanced Filters Button"
+  className="mx-auto"
+  style={{ width:"64%" }}
+/>
+
+Once you click "Show Advanced Filters," you'll see additional filtering options:
+
+<img
+  src="/images/filtersadvanced.png"
+  alt="Advanced Filter Options"
+  title="Advanced Filter Options"
+  className="mx-auto"
+  style={{ width:"39%" }}
+/>
+
+**Advanced Filter Options (from top to bottom):**
+
+**1. Filter by Users**
+
+This allows you to filter warnings by users who have active warnings:
+
+<img
+  src="/images/filtersfilterbyusers.png"
+  alt="Filter by Users"
+  title="Filter by Users"
+  className="mx-auto"
+  style={{ width:"55%" }}
+/>
+
+<Note>
+  User entries are automatically added when a moderator issues a warning. Currently, user avatars may not display their profile pictures or the first letter of their username.
+</Note>
+
+**2. Warning Type**
+
+As we've learned, warnings have two types: system and integrated.
+
+- **System Only:** Shows warnings issued only by Wish Logger
+- **Integrations Only:** Shows warnings from other integrated moderation bots
+- **Unselect both types:** Shows all warning types
+
+**3. Custom Date Range**
+
+Enabling the custom date range allows you to select warnings from specific dates:
+
+<img
+  src="/images/filterscustomdate.png"
+  alt="Custom Date Range"
+  title="Custom Date Range"
+  className="mx-auto"
+  style={{ width:"61%" }}
+/>
+
+As shown above, you can select:
+
+- **From:** The starting point of your date range
+- **To:** The ending point of your date range
+
+This allows you to check warnings from specific days, weeks, months, or years.
+
+**4. Reason Length Filter**
+
+This filter allows you to view warnings based on their reason length. Warning cards are updated instantly to reflect your reason length preferences:
+
+<img
+  src="/images/lenght.png"
+  alt="Reason Length Filter"
+  title="Reason Length Filter"
+  className="mx-auto"
+  style={{ width:"72%" }}
+/>
+
+**How to use the slider:**
+
+- **Default range:** 0 to 200 characters
+- **Left slider:** Set the minimum reason length by pulling it right
+- **Right slider:** Set the maximum reason length by pulling it left
+- Adjust both ends to customize your desired character range
+
+**5. Warnings with Attachments**
+
+<Warning>
+  This filter is currently not functional and won't be available for some time. The planned feature will allow moderators to attach various media files, such as text files, images, and more to warnings.
+</Warning>
+
+### Exporting Warnings
+
+You can export all of your server's warnings by clicking the "Export Warnings" button in the top-right corner:
+
+<img
+  src="/images/export.png"
+  alt="Export Warnings"
+  title="Export Warnings"
+  className="mx-auto"
+  style={{ width:"57%" }}
+/>
+
+## Conclusion
+
+Congratulations! You now have the knowledge to effectively manage your server's warning system. This documentation may be updated from time to time with new features and improvements, so we recommend checking back periodically for the latest information.
+
+Now go forth and manage those troublemakers! 🚀
