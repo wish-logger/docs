@@ -1,6 +1,85 @@
 ---
 title: "Buttons"
-description: "blank"
+description: "Learn the general idea of buttons that appear on the log messages."
 ---
 
-This page is currently under construction. Please check back later\! ;D
+When Wish Logger sends a log message, it will include buttons to perform quick actions. Here is a description of what each button does.
+
+<Tip>
+ You can disable or edit the appearance of the buttons in our dashboard by going to Other, and then scrolling down to button editor.
+</Tip>
+
+## Moderation Buttons
+These buttons help moderators take quick actions on users directly from the log messages.
+
+<Card title="Ban" icon="hammer" iconType="solid" color="#ef4444">
+ **Action:** Bans a user from the server.
+ **Permissions:** Requires the `Ban Members` permission.
+ **How it works:**
+ 1. When you click the button, a confirmation message will appear.
+ 2. If you confirm, the user mentioned in the log will be banned.
+</Card>
+
+<Card title="Kick" icon="arrow-right-from-bracket" iconType="solid" color="#f97316">
+ **Action:** Kicks a user from the server.
+ **Permissions:** Requires the `Kick Members` permission.
+ **How it works:**
+ 1. When you click the button, a confirmation message will appear.
+ 2. If you confirm, the user mentioned in the log will be kicked.
+</Card>
+
+<Card title="Mute" icon="microphone-slash" iconType="solid" color="#eab308">
+ **Action:** Mutes a user (applies a timeout).
+ **Permissions:** Requires the `Moderate Members` permission.
+ **How it works:**
+ 1. When you click the button, the user mentioned in the log will be timed out for 2 minutes.
+</Card>
+
+<Card title="Edit Reason" icon="pen-to-square" iconType="solid" color="#3b82f6">
+ **Action:** Edits the reason for a moderation action.
+ **Permissions:** Requires `Ban Members`, `Administrator` permission, or to be the server owner.
+ **How it works:**
+ 1. Clicking this button opens a modal.
+ 2. You can enter a new reason in the modal.
+ 3. The log message will be updated with the new reason.
+</Card>
+
+<Card title="Revoke" icon="x" iconType="solid" color="#8b5cf6">
+ **Action:** Revokes an item that was added (e.g., emoji, sticker, invite).
+ **Permissions:** Requires `Manage Expressions`, `Manage Guild`, `Administrator`, or `Create Expressions` permission.
+ **How it works:**
+ 1. The bot identifies the item from the log message.
+ 2. A confirmation message will appear.
+ 3. If you confirm, the item will be deleted from the server.
+</Card>
+
+## Utility Buttons
+These buttons provide helpful information or links.
+
+<Card title="User ID" icon="id-card" iconType="solid" color="#14b8a6">
+ **Action:** Shows the User ID of the user mentioned in the log.
+ **How it works:**
+ 1. Clicking this button will show the user's Discord ID in an ephemeral message.
+</Card>
+
+<Card title="Support Server" icon="life-ring" iconType="solid" color="#6366f1">
+ **Action:** Provides a link to the Wish Logger support server.
+ **How it works:**
+ 1. This is a link button that will take you to our Discord support server.
+</Card>
+
+<Card title="Customise" icon="wrench" iconType="solid" color="#d946ef">
+ **Action:** Takes you to the Wish Logger dashboard.
+ **How it works:**
+ 1. This is a link button that will take you to the bot's dashboard to customize settings.
+</Card>
+
+As stated before, you can disable the buttons on our website. You can change the color of the button, the name, and whether the button is disabled. "System" buttons (link buttons) are disabled from editing. In the future, we're planning to add a way to customize the "system" buttons as well as adding a way for users to add their own.
+
+Depending on the log, different buttons will be shown. For example, in the Join Log, Ban & Kick buttons will be shown.
+
+<Info>
+ Every log will always attach User ID, Customise, and Support Server, no matter the type.
+</Info>
+
+Mod logs, like bans, kicks, and mutes, will have an additional Edit Reason button. Every expression log (emojis, stickers) (and SoundBoard events in the future) will have the Revoke Button.
