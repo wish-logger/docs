@@ -3,87 +3,97 @@ title: "Types"
 description: "Learn about wish's log types"
 ---
 
-| **Log Type Name**            | **ID** | **Category** | **Special** |
-| :--------------------------: | :----: | :----------: | :---------: |
-| Automod Triggered            | 1      | Server       |             |
-| Automod Rule Created         | 2      | Server       |             |
-| Automod Rule Updated         | 3      | Server       |             |
-| Automod Rule Deleted         | 4      | Server       |             |
-| Avatar Updated               | 5      | Member       |             |
-| Mass Message Deleted         | 6      | Messages     |             |
-| Channel Followed             | 7      | Channel      |             |
-| Channel Unfollowed           | 8      | Channel      |             |
-| Followed Channel Updated     | 9      | Channel      |             |
-| Channel Deleted              | 10     | Channel      |             |
-| Channel Created              | 11     | Channel      |             |
-| Updated Channel              | 12     | Channel      |             |
-| Emoji Added                  | 13     | Actions      |             |
-| Emoji Removed                | 14     | Actions      |             |
-| Emoji Updated                | 15     | Actions      |             |
-| Server Role Created          | 16     | Role         |             |
-| Server Role Deleted          | 17     | Role         |             |
-| Server Role Updated          | 18     | Role         |             |
-| Server Event Created         | 19     | Actions      |             |
-| Server Event Deleted         | 20     | Actions      |             |
-| Server Event Updated         | 21     | Actions      |             |
-| Server Event User Joined     | 22     | Actions      |             |
-| Server Event User Left       | 23     | Actions      |             |
-| Server Updated               | 24     | Server       |             |
-| Server Updated [Feature -]   | 25     | Server       |             |
-| Server Updated [Feature \+]  | 26     | Server       |             |
-| Invite Created               | 27     | Actions      |             |
-| Invite Deleted               | 28     | Actions      |             |
-| Member Ban                   | 29     | Mod Action   |             |
-| Bot Added                    | 30     | Members      |             |
-| User Joined                  | 31     | Members      |             |
-| Bot Removed                  | 32     | Members      |             |
-| Member Kicked                | 33     | Mod Action   |             |
-| Member Left                  | 34     | Members      |             |
-| User Unbanned                | 35     | Mod Action   |             |
-| Member TimedOut              | 36     | Mod Action   |             |
-| Member Unmuted               | 37     | Mod Action   |             |
-| Member Nickname Changed      | 38     | Members      |             |
-| Message Deleted              | 39     | Messages     |             |
-| Attachment Deleted           | 40     | Messages     |             |
-| Message Edited               | 41     | Messages     |             |
-| Message Pinned               | 42     | Messages     |             |
-| Message Unpinned             | 43     | Messages     |             |
-| Poll Created                 | 44     | Server       |             |
-| Poll Ended                   | 45     | Server       |             |
-| Members Pruned               | 46     | Members      |             |
-| Many Reaction Removed        | 47     | Actions      |             |
-| Reaction Removed             | 48     | Actions      |             |
-| Role Taken                   | 49     | Members      |             |
-| Role Given                   | 50     | Members      |             |
-| SoundBoard Sound Added       | 51     | Server       |             |
-| SoundBoard Sound Removed     | 52     | Server       |             |
-| SoundBoard Sound Updated     | 53     | Server       |             |
-| Stage Raised Hand            | 54     | Voice        |             |
-| Stage Invited To Speak       | 55     | Voice        |             |
-| Stage Moved To Audience      | 56     | Voice        |             |
-| Stage Cancelled Request      | 57     | Voice        |             |
-| Stage Instance Created       | 58     | Voice        |             |
-| Stage Instance Deleted       | 59     | Voice        |             |
-| Stage Instance Updated       | 60     | Voice        |             |
-| Sticker Added                | 61     | Actions      |             |
-| Sticker Removed              | 62     | Actions      |             |
-| Sticker Updated              | 63     | Actions      |             |
-| Thread Deleted               | 64     | Messages     |             |
-| Thread Created               | 65     | Messages     |             |
-| Thread Updated               | 66     | Messages     |             |
-| Member Voice Joined          | 67     | Voice        |             |
-| Member Voice Left            | 68     | Voice        |             |
-| Member Voice Moved           | 69     | Voice        |             |
-| Member Voice Updated         | 70     | Voice        |             |
-| Streaming Started            | 71     | Voice        |             |
-| Streaming Ended              | 71     | Voice        |             |
-| Camera Started               | 72     | Voice        |             |
-| Camera Ended                 | 72     | Voice        |             |
-| Webhook Channel Changed      | 73     | Actions      |             |
-| Webhook Created              | 74     | Actions      |             |
-| Webhook Deleted              | 75     | Actions      |             |
-| Webhook Updated              | 76     | Actions      |             |
-| Wish Logging Channel Changed | 167    |              | x           |
-| Wish Ignore Option Changed   | 168    |              | x           |
-| Wish Option Changed          | 169    |              | x           |
-| Wish Language Changed        | 170    |              | x           |
+| **Log Type Name**               | **ID** | **Category** | **Special** |
+| :-----------------------------: | :----: | :----------: | :---------: |
+| Automod Triggered               | 1      | Server       |             |
+| Automod Rule Created            | 2      | Server       |             |
+| Automod Rule Updated            | 3      | Server       |             |
+| Automod Rule Deleted            | 4      | Server       |             |
+| Avatar Updated                  | 5      | Member       |             |
+| Mass Message Deleted            | 6      | Messages     |             |
+| Channel Followed                | 7      | Channel      |             |
+| Channel Unfollowed              | 8      | Channel      |             |
+| Followed Channel Updated        | 9      | Channel      |             |
+| Channel Deleted                 | 10     | Channel      |             |
+| Channel Created                 | 11     | Channel      |             |
+| Updated Channel                 | 12     | Channel      |             |
+| Channel Overwrites Synced       | 115    | Channel      |             |
+| Channel Overwrites Sync Updated | 117    | Channel      |             |
+| Channel Overwrites Removed      | 118    | Channel      |             |
+| Channel Overwrites Added        | 112    | Channel      |             |
+| Channel Overwrites Updated      | 113    | Channel      |             |
+| Channel Overwrites Removed      | 114    | Channel      |             |
+| Emoji Added                     | 13     | Actions      |             |
+| Emoji Removed                   | 14     | Actions      |             |
+| Emoji Updated                   | 15     | Actions      |             |
+| Server Role Created             | 16     | Role         |             |
+| Server Role Deleted             | 17     | Role         |             |
+| Server Role Updated             | 18     | Role         |             |
+| Server Event Created            | 19     | Actions      |             |
+| Server Event Deleted            | 20     | Actions      |             |
+| Server Event Updated            | 21     | Actions      |             |
+| Server Event User Joined        | 22     | Actions      |             |
+| Server Event User Left          | 23     | Actions      |             |
+| Server Updated                  | 24     | Server       |             |
+| Server Updated [Feature -]      | 25     | Server       |             |
+| Server Updated [Feature \+]     | 26     | Server       |             |
+| Invite Created                  | 27     | Actions      |             |
+| Invite Deleted                  | 28     | Actions      |             |
+| Member Ban                      | 29     | Mod Action   |             |
+| Bot Added                       | 30     | Members      |             |
+| User Joined                     | 31     | Members      |             |
+| Bot Removed                     | 32     | Members      |             |
+| Member Kicked                   | 33     | Mod Action   |             |
+| Member Left                     | 34     | Members      |             |
+| User Unbanned                   | 35     | Mod Action   |             |
+| Member TimedOut                 | 36     | Mod Action   |             |
+| Member Unmuted                  | 37     | Mod Action   |             |
+| Member Nickname Changed         | 38     | Members      |             |
+| Message Deleted                 | 39     | Messages     |             |
+| Attachment Deleted              | 40     | Messages     |             |
+| Message Edited                  | 41     | Messages     |             |
+| Message Pinned                  | 42     | Messages     |             |
+| Message Unpinned                | 43     | Messages     |             |
+| Poll Created                    | 44     | Server       |             |
+| Poll Ended                      | 45     | Server       |             |
+| Members Pruned                  | 46     | Members      |             |
+| Many Reaction Removed           | 47     | Actions      |             |
+| Reaction Removed                | 48     | Actions      |             |
+| Role Taken                      | 49     | Members      |             |
+| Role Given                      | 50     | Members      |             |
+| SoundBoard Sound Added          | 51     | Server       |             |
+| SoundBoard Sound Removed        | 52     | Server       |             |
+| SoundBoard Sound Updated        | 53     | Server       |             |
+| Stage Raised Hand               | 54     | Voice        |             |
+| Stage Invited To Speak          | 55     | Voice        |             |
+| Stage Moved To Audience         | 56     | Voice        |             |
+| Stage Cancelled Request         | 57     | Voice        |             |
+| Stage Instance Created          | 58     | Voice        |             |
+| Stage Instance Deleted          | 59     | Voice        |             |
+| Stage Instance Updated          | 60     | Voice        |             |
+| Sticker Added                   | 61     | Actions      |             |
+| Sticker Removed                 | 62     | Actions      |             |
+| Sticker Updated                 | 63     | Actions      |             |
+| Thread Deleted                  | 64     | Messages     |             |
+| Thread Created                  | 65     | Messages     |             |
+| Thread Updated                  | 66     | Messages     |             |
+| Member Voice Joined             | 67     | Voice        |             |
+| Member Voice Left               | 68     | Voice        |             |
+| Member Voice Moved              | 69     | Voice        |             |
+| Member Voice Updated            | 70     | Voice        |             |
+| Streaming Started               | 71     | Voice        |             |
+| Streaming Ended                 | 71     | Voice        |             |
+| Camera Started                  | 72     | Voice        |             |
+| Camera Ended                    | 72     | Voice        |             |
+| Webhook Channel Changed         | 73     | Actions      |             |
+| Webhook Created                 | 74     | Actions      |             |
+| Webhook Deleted                 | 75     | Actions      |             |
+| Webhook Updated                 | 76     | Actions      |             |
+| Wish Logging Channel Updated    | 167    |              | x           |
+| Wish Ignore Option Changed      | 168    |              | x           |
+| Wish Configuration Reset        | 169    |              | x           |
+| Wish Language Changed           | 170    |              | x           |
+| Wish Button Update              | 174    |              | x           |
+| Wish Add Option Changed         | 175    |              | x           |
+| Wish Updates Enable             | 171    |              | x           |
+| Wish Default Fallback           | 999    |              | x           |
