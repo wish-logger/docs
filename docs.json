@@ -36,6 +36,7 @@
               "logs/types",
               "logs/setup",
               "logs/options",
+              "logs/buttons",
               "logs/search",
               "logs/customization"
             ]
